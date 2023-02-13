@@ -18,7 +18,6 @@ const ZombieProvider: React.FC<React.PropsWithChildren<unknown>> = ({
 			last_name: zombie.last_name,
 			avatar: zombie.avatar,
 		};
-		console.log("--->", zombies.length);
 		if (zombies.length <= 2) {
 			setZombies([...zombies, newZombie]);
 		} else {
