@@ -11,7 +11,7 @@ export type ZombieType = {
 
 export const useListZombiesActions = () => {
 	const fetchWrapper = useFetchWrapper();
-	const [listZombies, setStateListZombies] = useState();
+	const [listZombies, setStateListZombies] = useState<ZombieType[]>([]);
 
 	const getListZombies = useCallback(async () => {
 		try {

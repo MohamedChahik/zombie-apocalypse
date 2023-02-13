@@ -2,8 +2,8 @@ import { FC, PropsWithChildren, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ZombieContextType } from "../../config/types/zombie";
 import { ZombieContext } from "../../config/zombie/zombieContext";
-import "./layout.css";
-export const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
+import "./header.css";
+export const Header: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	const navigate = useNavigate();
 	const { zombies } = useContext(ZombieContext) as ZombieContextType;
 	return (

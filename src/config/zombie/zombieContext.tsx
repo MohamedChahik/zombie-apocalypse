@@ -28,7 +28,7 @@ const ZombieProvider: React.FC<React.PropsWithChildren<unknown>> = ({
 	const updateZombieTeam = (id: number) => {
 		zombies.filter((zombie: IZombie) => {
 			if (zombie.id === id) {
-				setZombies([...zombies]);
+				setZombies(prev => prev.filter(zombie => zombie.id !== id));
 			}
 		});
 	};

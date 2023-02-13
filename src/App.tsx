@@ -1,10 +1,10 @@
 import "../src/styles/App.css";
 import { AppRouter } from "./config/router/AppRouter";
-import { Layout } from "./utils/ui/Layout";
+import { Header } from "./utils/ui/Header";
 
 const App = () => (
-	<Layout>
+	<Header>
 		<AppRouter />
-	</Layout>
+	</Header>
 );
 export default App;
