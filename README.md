@@ -1,4 +1,4 @@
-# URL Shortener
+# Zombie apocalypse
 
 This game is about building a team to survive the next zombie invasion
 
