@@ -1,14 +1,24 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { IZombie, ZombieContextType } from "../../config/types/zombie";
+import { ZombieContext } from "../../config/zombie/zombieContext";
 import { useListZombiesActions } from "./hook/useListZombies";
 
 const ListZombies = () => {
 	const navigate = useNavigate();
 	const { getListZombies, listZombies } = useListZombiesActions();
+	const { saveZombieTeam, zombies } = useContext(
+		ZombieContext,
+	) as ZombieContextType;
 
 	useEffect(() => {
 		getListZombies();
 	}, []);
+
+	const handleSaveTodo = (e: React.FormEvent, result: IZombie | any) => {
+		e.preventDefault();
+		saveZombieTeam(result);
+	};
 
 	return (
 		<>
@@ -34,12 +44,16 @@ const ListZombies = () => {
 										{item.email}
 									</span>
 									<div className="flex mt-4 space-x-3 md:mt-6">
-										<a
-											href="#"
+										{/* {zombies.filter((zombie: any) => zombie.includes(item))(
+											<div>test</div>,
+										)} */}
+
+										<button
 											className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+											onClick={e => handleSaveTodo(e, item)}
 										>
 											Ajout dans l'équipe
-										</a>
+										</button>
 									</div>
 								</div>
 							</div>

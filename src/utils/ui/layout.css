@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 900px;
+}
+
+header {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/f/f0/Groupofzombiesjoelf.jpg');
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+  margin-bottom: 3rem;
+
+}
+
+header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(135deg, #15151569 10%, #3c3c3c6b 100%);
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 50px;
+  margin-bottom: 1rem
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30px;
+}

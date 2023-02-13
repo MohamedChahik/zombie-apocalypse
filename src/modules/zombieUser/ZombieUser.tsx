@@ -12,8 +12,11 @@ const ZombieUser = () => {
 
 	return (
 		<>
+			<h1 className="text-center text-xl font-bold">
+				Utilisateur d'Apocalypse
+			</h1>
 			{zombieDescription ? (
-				<div className="flex-center flex justify-center h-96 mt-16">
+				<div className="flex-center flex justify-center h-96 mt-10">
 					<div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 						<h1 className="text-center text-xl text-white mt-6">
 							Numéro : {zombieDescription.id}

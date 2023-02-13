@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "../src/styles/App.css";
 import App from "./App";
+import ZombieProvider from "./config/zombie/zombieContext";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<App />
+			<ZombieProvider>
+				<App />
+			</ZombieProvider>
 		</BrowserRouter>
 	</React.StrictMode>,
 );
